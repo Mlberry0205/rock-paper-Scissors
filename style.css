@@ -1,0 +1,42 @@
+
+.title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+
+
+.row {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+align-content: stretch;
+justify-content: center;
+}
+
+
+.column-human {
+  margin-left: 13%;
+  align-items: center;
+  float: left;
+  padding: 50px;
+  width: 25%
+
+}
+
+.column-game {
+  align-items: center;
+  width: 50%;
+
+}
+
+.column-computer {
+  align-items: center;
+  width: 25%;
+
+}
