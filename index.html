@@ -7,28 +7,31 @@
   </head>
   <body>
     <header>
-      <h1 class="title">Rock, Paper, Scissors</h1>
+      <h1 class="title"> &#128520; Rock, Paper, Scissors &#128520;</h1>
+      <h3>Choose your Game!</h3>
     </header>
-    <div class="row">
-      <div class="column-human">
+
+
+    <section class="three-columns">
+    <section class="column-human">
         <h2>Human</h2>
         <p>Wins: 0</p>
-      </div>
-      <div class="column-game">
-        <h2>Choose your Game!</h2>
-        <div class ="container">
-            <div class="box">
-            <div class="content">
+    </section>
+
+
+    <section class="column-game">
+        <button class ="rules-box" id="Classic">
+            <section class="content">
               <h4>CLASSIC</h4>
               <p> rock > scissors<br>
                   paper > rock<br>
                   scissors > paper
               <p>
-            </div>
+        </Button>
+            </section>
         </div>
-        <div class ="container1">
-          <div class="box">
-            <div class="content">
+        <button class ="rules-box-two" id="Difficult">
+          <div class="content">
             <h4>DIFFICULT</h4>
             <p> rock > scissors & lizard<br>
               paper > rock & alien<br>
@@ -37,40 +40,20 @@
               alien > scissors & rock
               <p>
             </div>
-      <div class="column-computer">
+        </div>
+    </section>
+
+
+      <section class="column-computer">
         <h2>Computer</h2>
         <p>Wins: 0</p>
-      </div>
-    </div>
+      </section>
+    </section>
     <script src="js/main.js"></script>
   </body>
+
+  <footer>
+ <button class="change-game-button hidden">Change Game</button>
+</footer>
+
   </html>
-
-
-
-
-
-
-
-
-
-
-
-<!-- No whiteSpace, 2 spaces for indentation,  -->
-
-<!-- <html>
-  <head>
-    head content goes here
-  </head>
-  <body>
-    body content goes here
-    <section>
-      <h1>heading content goes here</h1>
-    </section>
-  </body>
-</html> -->
-
-<!-- Class and Id names should be surrounded by double quotes -->
-<!-- <section class="section" id="section1">
-  section content goes here
-</section>   -->
