@@ -95,6 +95,8 @@ justify-content: center;
 }
 
 .choices .choice {
+  height:100px;
+  width: 100px;
   cursor: pointer;
   border: 3px solid  #531345;
   background-color: rgba(255, 255, 255, 0.3);
@@ -123,4 +125,8 @@ justify-content: center;
   width: 400px;
   font-size: 50px;
   color: white;
+}
+
+.hidden {
+  display: none;
 }

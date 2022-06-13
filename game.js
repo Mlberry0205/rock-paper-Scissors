@@ -1,13 +1,24 @@
 class Game {
   construtor() {
-    this.type = type;
+    this.type = "CLASSIC" || "DIFFICULT"
     this.icons = [];
-    this.human = new Player("HUMAN!")
-    this.computer = new Player("COMPUTER");
-    this.humanChoice = humanChoice;
-    this.computerChoice = computerChoice
-    this.winner;
+    this.humanChoice = new Player("HUMAN!")
+    this.computerChoice = new Player("COMPUTER");
+    this.winner = null;
   }
+
+  chooseIcons() {
+    if (this.type === "CLASSIC") {
+      this.icons = ["rock", "paper", "scissors"]
+    } else if(this.type === "DIFFICULT") {
+      this.icons = ["rock", "paper", "scissors", "alien", "lizard"]
+    }
+  }
+}
+
+function getCpuChoice() {
+  this.computerChoice.currentChoice = Math.floor(Math.random() * 3);
+  return computerChoice[randomNumber];
 }
 
  selectWinner() {
@@ -38,5 +49,5 @@ class Game {
   if (this.humanChoice === "rock" && this.computerChoice === "paper") {
     this.winner = "COMPUTER";
   }
-    return  this.winner;
+    return this.winner;
 };

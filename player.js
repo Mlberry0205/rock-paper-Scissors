@@ -5,13 +5,11 @@ class Player {
     this.win = 0;
     this.type = "Classic"
     this.icons = ["rock", "paper", "scissors"]
+    this.currentChoice = ""
 
   }
 }
 
-
-function getCpuChoice() {
-  var choices = ['rock', 'paper', 'scissors'];
-  const randomNumber = Math.floor(Math.random() * 3);
-  return computerChoice[randomNumber];
-}
+takeTurn(event) {
+    this.currentChoice = event.target.id
+  }
