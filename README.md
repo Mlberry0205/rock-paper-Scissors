@@ -25,6 +25,11 @@ A classic two-person game against the computer! Choose “rock, paper, scissors,
 
 - [Morgan Berry](https://github.com/Mlberry0205)
 
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [YouTube](https://www.youtube.com/)
+  - [W3Schools](https://www.w3schools.com/)
+
 ## Image Credit
 
 - specialty icons created by [Freepik-Flaticon](https://www.flaticon.com/authors/freepik)
