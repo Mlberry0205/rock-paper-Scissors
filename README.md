@@ -33,3 +33,6 @@ A classic two-person game against the computer! Choose “rock, paper, scissors,
 ## Image Credit:
 
 - specialty icons created by [Freepik-Flaticon](https://www.flaticon.com/authors/freepik)
+
+## Project Link:
+[Rock-Paper-Scissors Link](file:///Users/morganberry/turing/rock-paper-scissors/index.html)
