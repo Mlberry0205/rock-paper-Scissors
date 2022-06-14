@@ -1,53 +1,52 @@
 class Game {
-  construtor() {
-    this.type = "CLASSIC" || "DIFFICULT"
+  constructor() {
+    this.type = "";
     this.icons = [];
-    this.humanChoice = new Player("HUMAN!")
-    this.computerChoice = new Player("COMPUTER");
+    this.human = new Player("human", "🙋");
+    this.computer = new Player("computer", "💻");
     this.winner = null;
   }
 
   chooseIcons() {
-    if (this.type === "CLASSIC") {
-      this.icons = ["rock", "paper", "scissors"]
-    } else if(this.type === "DIFFICULT") {
-      this.icons = ["rock", "paper", "scissors", "alien", "lizard"]
+    if (this.type === "classic") {
+      this.icons = ["rock", "paper", "scissors"];
+    } else if (this.type === "difficult") {
+      this.icons = ["rock", "paper", "scissors", "alien", "lizard"];
     }
   }
+
+  selectWinner() {
+   if (
+  (this.human.currentChoice === "rock" && this.computer.currentChoice === "scissors") ||
+  (this.human.currentChoice === "rock" && this.computer.currentChoice === "lizard") ||
+  (this.human.currentChoice === "paper" && this.computer.currentChoice=== "scissors") ||
+  (this.human.currentChoice === "paper" && this.computer.currentChoice === "alien") ||
+  (this.human.currentChoice === "scissors" && this.computer.currentChoice === "paper") ||
+  (this.human.currentChoice === "scissors" && this.computer.currentChoice === "lizard") ||
+  (this.human.currentChoice === "alien" && this.computer.currentChoice === "scissors") ||
+  (this.human.currentChoice === "alien" && this.computer.currentChoice === "rock") ||
+  (this.human.currentChoice === "lizrad" && this.computer.currentChoice === "paper") ||
+  (this.human.currentChoice === "lizard" && this.computer.currentChoice === "alien")) {
+    this.winner = true
+
+} else {
+  this.winner = false
+
+}
 }
 
-function getCpuChoice() {
-  this.computerChoice.currentChoice = Math.floor(Math.random() * 3);
-  return computerChoice[randomNumber];
+checkForDraw() {
+  if (this.human.currentChoice === this.computer.currentChoice) {
+  this.winner = null
+
+}
 }
 
- selectWinner() {
-  if (this.humanChoice === this.computerChoice) {
-    this.winner = "Tie";
+checkWin() {
+  if (this.winner === true) {
+    this.human.win++
+  } else if (this.winner === false) {
+    this.computer.win++
   }
-
-  if (this.humanChoice === "rock" && this.computerChoice === "scissors") {
-    this.winner = "Human";
-  }
-
-  if (this.humanChoice === "scissors" && this.computerChoice === "paper") {
-    this.winner = "Human";
-  }
-
-  if (this.humanChoice === "paper" && this.computerChoice === "rock") {
-    this.winner = "Human";
-  }
-
-  if (this.humanChoice === "scissors" && this.computerChoice === "rock") {
-    this.winner = "Human";
-  }
-
-  if (this.humanChoice === "paper" && this.computerChoice === "scissors") {
-    this.winner = "COMPUTER";
-  }
-
-  if (this.humanChoice === "rock" && this.computerChoice === "paper") {
-    this.winner = "COMPUTER";
-  }
-    return this.winner;
-};
+}
+}

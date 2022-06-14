@@ -1,15 +1,24 @@
 class Player {
   constructor(name, token) {
     this.name = name;
-    this.token = token
+    this.token = token;
     this.win = 0;
-    this.type = "Classic"
-    this.icons = ["rock", "paper", "scissors"]
-    this.currentChoice = ""
+    this.currentChoice = "";
 
   }
+
+  getCpuChoice() {
+    if (game.type === "classic") {
+      game.computer.currentChoice = classic[this.generatePick(classic)]
+    } else {
+      game.computer.currentChoice = difficult[this.generatePick(difficult)]
+    }
+  }
+
+generatePick(array) {
+  return Math.floor(Math.random() * array.length)
 }
-
-takeTurn(event) {
-    this.currentChoice = event.target.id
-  }
+// takeTurn(event) {
+//     this.currentChoice = event.target.id
+//   }
+}
