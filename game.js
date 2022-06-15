@@ -4,7 +4,7 @@ class Game {
     this.icons = [];
     this.human = new Player("human", "🙋");
     this.computer = new Player("computer", "💻");
-    this.winner = null;
+    this.winner = "";
   }
 
   chooseIcons() {
@@ -16,37 +16,32 @@ class Game {
   }
 
   selectWinner() {
-   if (
-  (this.human.currentChoice === "rock" && this.computer.currentChoice === "scissors") ||
-  (this.human.currentChoice === "rock" && this.computer.currentChoice === "lizard") ||
-  (this.human.currentChoice === "paper" && this.computer.currentChoice=== "scissors") ||
-  (this.human.currentChoice === "paper" && this.computer.currentChoice === "alien") ||
-  (this.human.currentChoice === "scissors" && this.computer.currentChoice === "paper") ||
-  (this.human.currentChoice === "scissors" && this.computer.currentChoice === "lizard") ||
-  (this.human.currentChoice === "alien" && this.computer.currentChoice === "scissors") ||
-  (this.human.currentChoice === "alien" && this.computer.currentChoice === "rock") ||
-  (this.human.currentChoice === "lizrad" && this.computer.currentChoice === "paper") ||
-  (this.human.currentChoice === "lizard" && this.computer.currentChoice === "alien")) {
-    this.winner = true
+    if (this.human.currentChoice === "rock" && (this.computer.currentChoice === "scissors" || this.computer.currentChoice === "lizard")) {
+      return this.winner = "human"
+    } else if (this.human.currentChoice === "paper" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "alien")) {
+      return this.winner = "human"
+    } else if (this.human.currentChoice === "scissors" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "lizard")) {
+      return this.winner = "human"
+    } else if (this.human.currentChoice === "lizard" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "alien")) {
+      return this.winner = "human"
+    } else if (this.human.currentChoice === "alien" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "scissors")) {
+      return this.winner = "human"
+    } else {
+      return this.winner = "computer"
+    }
+  }
 
-} else {
-  this.winner = false
+  checkForDraw() {
+    if (this.human.currentChoice === this.computer.currentChoice) {
+      return this.winner = "";
+    }
+  }
 
-}
-}
-
-checkForDraw() {
-  if (this.human.currentChoice === this.computer.currentChoice) {
-  this.winner = null
-
-}
-}
-
-checkWin() {
-  if (this.winner === true) {
+  checkWin() {
+    if (this.winner === "human") {
     this.human.win++
-  } else if (this.winner === false) {
+  } else if (this.winner === "computer") {
     this.computer.win++
   }
-}
+ }
 }

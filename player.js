@@ -15,10 +15,7 @@ class Player {
     }
   }
 
-generatePick(array) {
-  return Math.floor(Math.random() * array.length)
-}
-// takeTurn(event) {
-//     this.currentChoice = event.target.id
-//   }
-}
+  generatePick(array) {
+    return Math.floor(Math.random() * array.length)
+  }
+  }

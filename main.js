@@ -13,7 +13,8 @@ var difficultIcons = document.querySelector(".difficult-icons");
 var changeGameButton = document.querySelector(".change-game-button");
 var columnGame = document.querySelector(".column-game");
 var iconChoices = document.querySelector(".choices");
-var subtitleChange = document.getElementById("#subtitle");
+var subtitle = document.querySelector(".subtitle");
+var subtitleChange = document.querySelector(".subtitleTwo");
 var displayWinner = document.querySelector(".show-winner");
 var winnerText = document.querySelector(".winner");
 var mainText = document.querySelector(".main-text");
@@ -38,10 +39,17 @@ function showWinner() {
   <img src="assets/${game.human.currentChoice}.png"  class="choice" alt="${game.human.currentChoice}">
   <img src="assets/${game.computer.currentChoice}.png"  class="choice" alt="">
   `
-  if (game.winner === true) {
-    winnerText.innerHTML = "Player Wins!"
-  } else if (game.winner === false) {
-    winnerText.innerHTML = "Player Loses!"
+  showWinnerText()
+}
+
+function showWinnerText() {
+  winnerText.classList.remove("hidden");
+  if (game.winner === "human") {
+  winnerText.innerText = "Player Wins!"
+  } else if (game.winner === "computer") {
+  winnerText.innerText = "Computer Wins!"
+  } else if (game.winner === ""){
+  winnerText.innerText = "Tie"
   }
 }
 
@@ -80,6 +88,9 @@ function getHumanChoice(getPick) {
 
 function playClassicGame() {
   game.type = "classic";
+  subtitleChange.classList.remove("hidden");
+  winnerText.classList.add("hidden");
+  subtitle.classList.add("hidden");
   classicGameRules.classList.add("hidden");
   difficultGameRules.classList.add("hidden");
   classicIcons.classList.remove("hidden");
@@ -90,6 +101,9 @@ function playClassicGame() {
 
 function playChallengeGame() {
   game.type = "difficult";
+  subtitleChange.classList.remove("hidden");
+  subtitle.classList.add("hidden");
+  winnerText.classList.add("hidden");
   classicGameRules.classList.add("hidden");
   difficultGameRules.classList.add("hidden");
   classicIcons.classList.add("hidden");
@@ -99,6 +113,8 @@ function playChallengeGame() {
 }
 
 function returnToHomePage() {
+  subtitleChange.classList.add("hidden");
+  subtitle.classList.remove("hidden");
   classicGameRules.classList.remove("hidden");
   difficultGameRules.classList.remove("hidden");
   classicIcons.classList.add("hidden");
