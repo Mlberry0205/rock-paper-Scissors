@@ -5,7 +5,7 @@ A classic two-person game against the computer! Choose “rock, paper, scissors,
 
 ## Illustrations
 
-![Main Page](img width="1426" alt="Screen Shot 2022-06-14 at 6 34 07 PM" src="https://user-images.githubusercontent.com/102934145/173712379-19939b11-bfa1-4832-9068-4ea93e50330a.png")
+![Main Page]("https://user-images.githubusercontent.com/102934145/173712379-19939b11-bfa1-4832-9068-4ea93e50330a.png")
 ![Challenge Game Main Page](img width="1434" alt="Screen Shot 2022-06-14 at 6 34 22 PM" src="https://user-images.githubusercontent.com/102934145/173712460-a0890381-fbb2-413b-8183-772e1363457e.png")
 
 
