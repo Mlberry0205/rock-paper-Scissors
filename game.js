@@ -2,8 +2,8 @@ class Game {
   constructor() {
     this.type = "";
     this.icons = [];
-    this.human = new Player("human", "🙋");
-    this.computer = new Player("computer", "💻");
+    this.human = new Player("human");
+    this.computer = new Player("computer");
     this.winner = "";
   }
 

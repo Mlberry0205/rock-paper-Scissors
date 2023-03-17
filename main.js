@@ -13,6 +13,7 @@ var difficultIcons = document.querySelector(".difficult-icons");
 var changeGameButton = document.querySelector(".change-game-button");
 var columnGame = document.querySelector(".column-game");
 var iconChoices = document.querySelector(".choices");
+var title = document.querySelector(".title");
 var subtitle = document.querySelector(".subtitle");
 var subtitleChange = document.querySelector(".subtitleTwo");
 var displayWinner = document.querySelector(".show-winner");
@@ -35,6 +36,7 @@ function showWinner() {
   classicIcons.classList.add("hidden");
   difficultIcons.classList.add("hidden");
   mainText.classList.add("hidden");
+  title.classList.remove("hidden");
   displayWinner.innerHTML = `
   <img src="assets/${game.human.currentChoice}.png"  class="choice" alt="${game.human.currentChoice}">
   <img src="assets/${game.computer.currentChoice}.png"  class="choice" alt="">
@@ -44,6 +46,7 @@ function showWinner() {
 
 function showWinnerText() {
   winnerText.classList.remove("hidden");
+  title.classList.remove("hidden");
   if (game.winner === "human") {
   winnerText.innerText = "Player Wins!"
   } else if (game.winner === "computer") {
@@ -55,6 +58,7 @@ function showWinnerText() {
 
 function playGame(event) {
   changeGameButton.classList.add("hidden");
+  title.classList.remove("hidden");
   var getPick = event.target.id
   getHumanChoice(getPick);
   game.computer.getCpuChoice(game);
@@ -88,6 +92,7 @@ function getHumanChoice(getPick) {
 
 function playClassicGame() {
   game.type = "classic";
+  title.classList.remove("hidden")
   subtitleChange.classList.remove("hidden");
   winnerText.classList.add("hidden");
   subtitle.classList.add("hidden");
@@ -101,6 +106,7 @@ function playClassicGame() {
 
 function playChallengeGame() {
   game.type = "difficult";
+  title.classList.remove("hidden")
   subtitleChange.classList.remove("hidden");
   subtitle.classList.add("hidden");
   winnerText.classList.add("hidden");
