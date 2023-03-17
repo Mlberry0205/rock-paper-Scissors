@@ -7,7 +7,7 @@
   </head>
   <body>
     <section class="column-human">
-      <img src="assets/princess.png" id="princess" class="choice" alt="">
+      <img src="assets/princess.png" id="princess" class="choice-princess" alt="">
       <h2>Human</h2>
       <p class="player-wins">Wins</p>
       <button class="change-game-button hidden">Change Game</button>
@@ -37,30 +37,32 @@
       </section>
       <section class="column-game">
         <button class ="rules-box" id="Classic">
-          <section class="content">
-            <h4>CLASSIC</h4>
-            <p>rock > scissors</p>
-            <p>paper > rock</P>
-            <p>scissors > paper</p>
-        </Button>
-          </section>
-          <button class ="rules-box-two" id="Difficult">
-          <div class="content">
-            <h4>DIFFICULT</h4>
-            <p>rock > scissors & lizard</p>
-            <p>paper > rock & alien</p>
-            <p>scissors > paper & lizard</p>
-            <p>lizard > paper & alien</p>
-            <p>alien > scissors & rock</p>
+        <section class="content">
+          <h4>CLASSIC</h4>
+          <p>rock > scissors</p>
+          <p>paper > rock</P>
+          <p>scissors > paper</p>
+        </section>
+        </button>
+        <button class ="rules-box-two" id="Difficult">
+        <section class="content">
+          <h4>DIFFICULT</h4>
+          <p>rock > scissors & lizard</p>
+          <p>paper > rock & alien</p>
+          <p>scissors > paper & lizard</p>
+          <p>lizard > paper & alien</p>
+          <p>alien > scissors & rock</p>
+        </section>
+        </button>
       </section>
-      <section class="column-computer">
-        <img src="assets/computer.png" id="computer" class="choice" alt="">
-        <h2>Computer</h2>
-        <p class="computer-wins">Wins</p>
-      </section>
+    </section>
+    <section class="column-computer">
+      <img src="assets/computer.png" id="computer" class="choice-computer" alt="">
+      <h2>Computer</h2>
+      <p class="computer-wins">Wins</p>
     </section>
     <script type ="text/javascript" src="game.js"></script>
     <script type ="text/javascript" src="player.js"></script>
     <script type ="text/javascript" src="main.js"></script>
   </body>
-  </html>
+</html>
