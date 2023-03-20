@@ -1,5 +1,5 @@
 
-# Rock-Paper-Scissors
+# rock-paper-scissors
 
 A classic two-person game against the computer! Choose “rock, paper, scissors, then shoot!” Rock crushes scissors, scissors cut paper, and paper covers rock. Want more of a challenge?  Add in an alien and lizard!
 
